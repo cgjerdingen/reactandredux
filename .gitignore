@@ -1,8 +1,18 @@
+.DS_Store
+.AppleDouble
+.LSOverride
 # Logs
+# Thumbnails
+#._*
 logs
+# Files that might appear on external disk
+#.Spotlight-V100
+#.Trashes
 *.log
+node_modules/
+exercise_files/
 npm-debug.log*
-
+debug.log*
 # Runtime data
 pids
 *.pid
