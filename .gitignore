@@ -1,10 +1,12 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+
 # Logs
 # Thumbnails
 #._*
 logs
+
 # Files that might appear on external disk
 #.Spotlight-V100
 #.Trashes
@@ -13,6 +15,7 @@ node_modules/
 exercise_files/
 npm-debug.log*
 debug.log*
+
 # Runtime data
 pids
 *.pid
@@ -39,9 +42,13 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+#dist folder
+dist
 
 # Optional npm cache directory
 .npm
+#Webstorm metadata
+.idea
 
 # Optional REPL history
 .node_repl_history
