@@ -23,7 +23,7 @@ class CoursesPage extends React.Component {
 
   onClickSave() {
     //alert(`Saving ${this.state.course.title}`);
-    this.props.dispatch(courseActions.createCourse(this.state.course));
+    this.props.createCourse(this.state.course);
   }
 
   courseRow(course, index) {
@@ -50,8 +50,9 @@ class CoursesPage extends React.Component {
 }
 
 CoursesPage.propTypes = {
-    dispatch: PropTypes.func.isRequired,
-    courses: PropTypes.array.isRequired
+  // dispatch: PropTypes.func.isRequired, //no longer needed cause connect is supplying it.
+  courses: PropTypes.array.isRequired,
+  createCourse: PropTypes.func.isRequired
 };
 
 function  mapStateToProps(state, ownProps) {
@@ -60,4 +61,10 @@ function  mapStateToProps(state, ownProps) {
   };
 }
 
-export default connect(mapStateToProps)(CoursesPage); //returns function that call with CoursesPage , kind of functional style
+function  mapDispatchToProps(dispatch) {
+  return {
+    createCourse: (course) => dispatch(courseActions.createCourse(course))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage); //returns function that call with CoursesPage , kind of functional style
