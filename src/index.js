@@ -20,5 +20,5 @@ render(
   document.getElementById('app')
 );
 
-console.log('hello');
+console.log('hello from index.js');
 
