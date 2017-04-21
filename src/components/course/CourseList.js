@@ -23,7 +23,8 @@ const CourseList = ({courses, deleteCourse}) => {
 };
 
 CourseList.propTypes = {
-  courses: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired,
+  deleteCourse: PropTypes.trypopfuncname
 };
 
 export default CourseList;
